@@ -1,0 +1,52 @@
+Adding a class attribute to an HTML element allows you to change it without changing
+other similar elements
+
+You can style things based on their location using a selector called the descendant combinator
+ - e.g.
+    li em {
+        color: rebeccapurple;
+    }
+Doing this will select any <em> elements that are a descendant of an <li> element
+
+Next-sibling combinator
+ - e.g.
+    h1 + p {
+        font-size: 200%
+    }
+Doing this allows one to target an element that is the immediate next sibling of another
+specified element
+
+You can style things based on their state
+ - e.g. <a> elements have different states: unvisited, visited, being hovered over
+  focused via the keyboard, or in the process of being clicked (activated).
+
+  a:link {
+    color: pink;
+  }
+
+  a:visted {
+    color: green;
+  }
+
+  a:hover{
+    text-decoration: none;
+  }
+
+You can combine multiple selectors and combinators together
+ - e.g.
+    article p span {
+        -this selects any span element that is inside a p element that is
+        inside an article element
+    }
+
+    h1 + ul + p {
+        this selects any p element that comes directly after a ul element that comes
+        directly after an h1 element
+    }
+
+    h1 + p .special {
+        this selects any element of class 'special' that is a descendant of a p
+        element that comes directly after an h1 element
+    }
+
+    
