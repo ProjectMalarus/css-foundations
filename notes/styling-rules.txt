@@ -49,4 +49,24 @@ You can combine multiple selectors and combinators together
         element that comes directly after an h1 element
     }
 
-    
+@rules
+ - provide instructions for how CSS should behave
+ -common one is @media, which is used to create media queries,
+ media queries use conditional logic for applying CSS styling
+ - e.g.
+    body {
+        background-color: pink;
+    }
+
+    @media (width >= 30em) {
+        body {
+            background-color: blue;
+        }
+    }
+
+    The stylesheet defines a default pink background for the body element.
+    However, a media query follows that sets a blue background on the body
+    element if the browser viewport is wide than 30em.
+
+    Shorhand properties (font, background, padding, border, and margin)
+    set several values in one line.
