@@ -1,2 +1,3 @@
 Media queries (https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries)
 Transform property (https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transform)
+Pseudo-classes (https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)

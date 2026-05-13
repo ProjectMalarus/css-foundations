@@ -1,0 +1,32 @@
+article p:first-child::first-line {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+article p::first-line {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+p::selection {
+    background-color: red;
+}
+
+p:hover {
+    color: blue;
+}
+
+article p:last-child {
+    background-color: orange;
+}
+
+article p::first-letter {
+    background-color: yellow;
+    border: 1px solid black;
+    font-size: 2rem;
+}
+
+.box::after {
+  content: " This should show after the other content.";
+  background-color: yellow;
+}

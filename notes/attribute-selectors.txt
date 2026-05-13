@@ -1,0 +1,42 @@
+Presence and value selectors enable the selection of an element based on
+the presence of an attribute alone, or on various different matches against
+the value of the attribute.
+
+[attr]
+- e.g.
+    a[title]
+    matches elements with an attr attribute (whose name is in the value in square brackets)
+
+[attr=value]
+- e.g.
+    a[href="https://example.com"]
+    matches elements with an attr attribute whose value is exactly *value* - the string
+    inside the quotes
+
+[attr~=value]
+- e.g.
+    p[class~="special"]
+    matches elements with an attr attribute whose value is exactly *value*, or contains *value*
+    in its (space-separated) list of values
+
+[attr|=value]
+- e.g.
+    div[lang|="zh"]
+    matches elements with an attr attribute whose value is exactly *value* or begins with *value*
+    immediately followed by a hyphen
+
+[attr^=value]
+- e.g.
+    li[class^="box-"]
+    matches elements with an attr attribute, whose value begins with *value*
+
+[attr$=value]
+- e.g.
+    li[class$="-box"]
+    matches elements with an attribute whose value ends with *value*
+
+[attr*=value]
+- e.g.
+    li[class*="box"]
+    matches elements with an attr attribute whose value contains *value* anywhere
+    within the string

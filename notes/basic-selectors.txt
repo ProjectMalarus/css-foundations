@@ -1,0 +1,57 @@
+You can create a selector that will target specific elements with the class
+applied.
+This is done by using the type selector for the element you wanna target, with
+the class appended using a dot, with no whitespace in between.
+- e.g.
+    span.highlight {
+        background-color: yellow;
+    }
+
+    h1.highlight {
+        background-color: pink;
+    }
+
+You can apply multiple classes to an element and target them individually,
+or only select the element when all of the classes in the selector are present.
+You do this by appending the necessary classes together with a period
+(with no whitespaces)
+- e.g.
+    .notebox {
+        border: 4px solid #666666;
+        padding: .5em;
+        margin: .5em;
+    }
+
+    .notebox.warning {
+        border-color: orange;
+        font-weight: bold;
+    }
+
+    .notebox.danger {
+        border-color: red;
+        font-weight: bold;
+    }
+
+In this example if the element has any of the class(es) above it will
+receive the corresponding styling. Otherwise it won't receive any styling.
+
+ID selectors begin with #'s instead of dots, but is used the same as a
+class selector. The difference is that an ID can be used only once per page
+and elements can only have a single id value.
+
+You can precede the ID with a type seletor to only target the element if both
+the element and ID match.
+
+If you want to apply the same CSS to multiple items, you can combine individually
+selectors into a selector list. This is done by separating the selectors with
+commas (whitespace before/after the comma is valid).
+
+Be careful though, if a selector is syntactically invalid then the entire rule
+will be ignored.
+
+'*' is the universal asterisk, it selects everything in the document. If * is
+chained using a descendant combinator, it selects every descendant of that element.
+
+- e.g.
+    p * selects all the nested elements inside the p element
+
