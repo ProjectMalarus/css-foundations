@@ -1,0 +1,36 @@
+Block and inline boxes
+    - the type refers to how the box behaves in terms of page flow and in
+    relation to other boxes on the page
+    - boxes have an inner display type and an outer display type
+    - if a box has a display value of 'block' then:
+      - the box will break onto a new line
+      - the width and height properties are respected
+      - padding, margin and border will cause other elements to be pushed
+      away from the box
+      - if width is not specified, the box will extend in the inline direction
+      to fill the space available in its container
+        - in most cases the box will become as wide as its container filling up
+        100% of the space available
+    - some HTML elements, such <h1> and <p>, use block as their outer display
+    type by default
+    - if a box has a display value of 'inline' then:
+      - the box will not break onto a new line
+      - the width, height, and top and bottom margins will have no effect
+      - top and bottom padding and borders will change the size of the box without
+      affecting the position of surrounding content, which can cause overlapping
+      - left and right padding, margins, borders will affect the position of
+      surrounding inline content
+    - some HTML elements, such as <a>, <span>, <em> and <strong> use inline as
+    their outer display type by default
+  
+Inner and outer display types
+    - block and inline display values are said to be outer display types - they
+    affect how the box is laid out in relation to other boxes around it
+    - boxes also have an inner display type, which dictates how elements inside
+    that box are laid out
+    - inner display type can be changed via changing the inner display value
+      - e.g. display = flex;
+      - any children of this box will become flex items
+
+
+
