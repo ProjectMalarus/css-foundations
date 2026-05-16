@@ -86,4 +86,25 @@ Margins, padding, and borders
       - setting a negative value can cause it to overlap other things on the page
     - regardless of model (standard/alternative), the margin is always added after the size
     of the visible box has been calculated
-    
+
+    - Margin collapsing
+      - depending on whether two elements whose margins touch have positive or negative margins
+      the result will be different:
+        - Two positive margins will combine to become one margin. Its size will be equal to the
+        largest individual margin
+        - Two negative margins will collapse and the smallest (furthest from zero) value will be used.
+        - If one margin is negative, its value will be subtracted from the total
+
+  Borders
+    - drawn between the margin and the padding of a box
+      - if you are using the standard box model, the size of the border is added to the width and
+      height of the content box
+      - if you are using the alternative box model, then the bigger the border is, the smaller
+      the content box is, as the border takes up some of that available width and height of the
+      element box
+  
+  Padding
+    - sits between the border and the content area and is used to push the content away from the border
+    - cannot have a negative padding
+    - any background applied to your element will display behind the padding
+
