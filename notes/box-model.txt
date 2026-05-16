@@ -32,5 +32,58 @@ Inner and outer display types
       - e.g. display = flex;
       - any children of this box will become flex items
 
+The CSS box model as a whole applies to block boxes and defines how the different
+parts of a box - margin, border, padding, and content - work together to create
+a box that you can see on a page. Inline boxes use just some of the behavior defined
+in the box model.
 
+Parts of a box
+    - content box: the area where your content is displayed; size it using properties
+    like width and height
+    - padding box: the padding sits around the content as white space; size it using
+    padding and related properties
+    - border box: the border box wraps the content and any padding; size it using
+    border and related properties
+    - margin box: the margin is the outermost layer, wrapping the content, padding, and
+    border as whitespace between this box and other elements; size it using margin and
+    related properties
 
+Standard CSS box model
+    - width and height values define the dimensions of the CONTENT BOX
+    - padding and borders are added to those dimensions to get the total size
+    - Ex.
+      .box {
+        width: 350px;
+        height: 150px;
+        margin: 10px;
+        padding: 25px;
+        border: 5px solid black;
+      }
+      Actual total size would be 410px wide and 210px high after adding up all the properties
+        - Margins aren't counted toward the box's actual size but they do affect the total
+        space that the box takes up
+
+Alternative CSS box model
+    - any width is the width of the visible box on the page
+    - content area width is that width minus the width for the padding and border
+    - turn on alternative model by setting box-sizing: border box on it
+    - to use alternative box model for all elements, set the box-sizing property on the <html>
+    element and set all other elements to inherit that value:
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+Margins, padding, and borders
+  Margin
+    - an invisible space around your box that pushes other elements away from the box
+    - values can be positive or negative
+      - setting a negative value can cause it to overlap other things on the page
+    - regardless of model (standard/alternative), the margin is always added after the size
+    of the visible box has been calculated
+    
